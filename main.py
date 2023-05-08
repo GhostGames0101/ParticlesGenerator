@@ -5,6 +5,7 @@ from math import sin, cos, pi
 pygame.init()
 screen = pygame.display.set_mode((0, 0), FULLSCREEN)
 font = pygame.font.SysFont('impact', 50)
+clock = pygame.time.Clock()
 running = True
 
 smoke_particles = list()
@@ -54,7 +55,7 @@ rw = 0
 
 
 while running:
-    pygame.time.Clock().tick(60)
+    clock.tick(60)
     screen.fill((0, 0, 0))
 
     generate_smoke(rr - 90, 9, (255, 0, 0), (xr, yr))
